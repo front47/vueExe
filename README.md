@@ -1,6 +1,6 @@
-##### maizuo
+## maizuo
 
-### vue_demo
+# vue_demo
 
 ## Build Setup
 
