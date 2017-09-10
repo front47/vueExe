@@ -1,5 +1,7 @@
-import Hello from './Hello'
+import test from './test'
+import navbar from './navbar'
 
-export default ({
-    Hello
-})
+export default {
+	test,
+	navbar
+}
