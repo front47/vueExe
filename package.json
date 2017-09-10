@@ -5,7 +5,6 @@
   "author": "LiPusen <283008477@qq.com>",
   "private": true,
   "scripts": {
-    "dev": "node build/dev-server.js",
     "start": "pm2 start build/dev-server.js",
     "build": "node build/build.js"
   },
