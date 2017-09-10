@@ -1,4 +1,4 @@
-# maizuo
+##### maizuo
 
 ### vue_demo
 
@@ -24,7 +24,7 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 
 ### vue_demo
 
-## Build Setup
+# Build Setup
 
 ``` bash
 # install dependencies
