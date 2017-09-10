@@ -6,15 +6,16 @@ import router from './router'
 
 import Fastclick from 'fastclick'
 
-import Components from './components'
+//引入自定义组件
+import components from './components'
 
 Vue.config.productionTip = false
 
-window.onlod = () => Fastclick(document.body)
+window.onload = () => Fastclick.attach(document.body);
 
-object.key(components).forEach(k => {
-  let name = k.replace(/\w/,v => v.toUpperCase())
-  Vue.component(`v${name}`,components[k])
+Object.keys(components).forEach(k => {
+	let name = k.replace(/\w/, v => v.toUpperCase());
+	Vue.component(`v${name}`, components[k]);
 })
 
 /* eslint-disable no-new */
