@@ -2,7 +2,7 @@
 
 > vue_demo
 
-## Build Setup
+# Build Setup
 
 ``` bash
 # install dependencies
