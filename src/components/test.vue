@@ -1,5 +1,5 @@
 <template>
-  <a href='http://www.baidu.com'>ç™¾åº¦</a>
+  <a href='http://www.baidu.com'>°Ù¶È</a>
 </template>
 
 <script>
