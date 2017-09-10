@@ -1,9 +1,14 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+  <div class="content">
+    <v-navbar></v-navbar>
+    <div class="box">
+    	<router-view></router-view>
+    </div>
   </div>
 </template>
+
+<style src="./assets/reset.css"></style>
+<style src="./assets/icon.css"></style>
 
 <script>
 export default {
