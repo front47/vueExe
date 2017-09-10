@@ -1,7 +1,8 @@
-import test from './test'
-import navbar from './navbar'
+import Hello from './Hello'
+// import test from './test'
 
 export default {
-	test,
-	navbar
+  Hello
+  // test
 }
+

@@ -1,6 +1,7 @@
 <template>
-  <div class="content">
-    <v-navbar></v-navbar>
+  <div id="app">
+    <img src="./assets/logo.png">
+    <v-Hello></v-Hello>
   </div>
 </template>
 
@@ -10,7 +11,7 @@ export default {
 }
 </script>
 
-<style scoped="">
+<style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
