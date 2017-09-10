@@ -10,8 +10,6 @@ import components from './components'
 
 Vue.config.productionTip = false
 
-Vue.config.productionTip = false
-
 window.onload = () => Fastclick.attach(document.body)
 
 Object.keys(components).forEach(k => {
