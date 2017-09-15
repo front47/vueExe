@@ -1,7 +1,13 @@
-import Hello from './Hello'
-import test from './test'
+import filmItem from './filmItem'
+import imgLoad from './imgLoad'
+import more from './more'
+import navbar from './navbar'
+import sidebar from './sidebar'
 
 export default {
-  Hello,
-  test
+	filmItem,
+	imgLoad,
+	more,
+	navbar,
+	sidebar
 }

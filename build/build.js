@@ -1,8 +1,11 @@
+//版本检查针对npm和node
 require('./check-versions')()
 
 process.env.NODE_ENV = 'production'
 
+// 优雅的加载转轮效果
 var ora = require('ora')
+// node环境下的强制删除命令
 var rm = require('rimraf')
 var path = require('path')
 var chalk = require('chalk')
@@ -25,11 +28,6 @@ rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err => {
       chunks: false,
       chunkModules: false
     }) + '\n\n')
-
-    if (stats.hasErrors()) {
-      console.log(chalk.red('  Build failed with errors.\n'))
-      process.exit(1)
-    }
 
     console.log(chalk.cyan('  Build complete.\n'))
     console.log(chalk.yellow(

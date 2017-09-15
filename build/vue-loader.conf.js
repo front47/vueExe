@@ -2,6 +2,7 @@ var utils = require('./utils')
 var config = require('../config')
 var isProduction = process.env.NODE_ENV === 'production'
 
+//vue相关的公共配置
 module.exports = {
   loaders: utils.cssLoaders({
     sourceMap: isProduction
@@ -9,10 +10,9 @@ module.exports = {
       : config.dev.cssSourceMap,
     extract: isProduction
   }),
-  transformToRequire: {
-    video: 'src',
-    source: 'src',
-    img: 'src',
-    image: 'xlink:href'
-  }
+  postcss: [
+		require('autoprefixer')({
+			browsers: ['last 100 versions']
+		})
+	],
 }

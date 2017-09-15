@@ -20,7 +20,7 @@ exports.cssLoaders = function (options) {
     }
   }
 
-  // generate loader string to be used with extract text plugin
+  // 从需要加载的文件类型提取所需的加载器
   function generateLoaders (loader, loaderOptions) {
     var loaders = [cssLoader]
     if (loader) {
@@ -32,8 +32,7 @@ exports.cssLoaders = function (options) {
       })
     }
 
-    // Extract CSS when that option is specified
-    // (which is the case during production build)
+    // 在生产过程中根据配置按需分离文件
     if (options.extract) {
       return ExtractTextPlugin.extract({
         use: loaders,
@@ -44,7 +43,6 @@ exports.cssLoaders = function (options) {
     }
   }
 
-  // https://vue-loader.vuejs.org/en/configurations/extract-css.html
   return {
     css: generateLoaders(),
     postcss: generateLoaders(),
@@ -56,7 +54,7 @@ exports.cssLoaders = function (options) {
   }
 }
 
-// Generate loaders for standalone style files (outside of .vue)
+// 为独立样式文件进行相应的加载处理(排除.vue文件)
 exports.styleLoaders = function (options) {
   var output = []
   var loaders = exports.cssLoaders(options)

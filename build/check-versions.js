@@ -1,6 +1,9 @@
+// 可以将参数链式调用并组装,美化输出样式
 var chalk = require('chalk')
+// npm语义化版本控制工具
 var semver = require('semver')
 var packageConfig = require('../package.json')
+//获得输入的命令
 var shell = require('shelljs')
 function exec (cmd) {
   return require('child_process').execSync(cmd).toString().trim()
@@ -11,7 +14,7 @@ var versionRequirements = [
     name: 'node',
     currentVersion: semver.clean(process.version),
     versionRequirement: packageConfig.engines.node
-  }
+  },
 ]
 
 if (shell.which('npm')) {
