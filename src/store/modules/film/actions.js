@@ -7,11 +7,17 @@ import vue from 'vue'
  */
 const _get = ({ url, query }, commit) => {
   if (commit) commit('START_LOADING')
-  let _url
-  if (query) {
-    _url = `/v4/api${url}?${query}`
+  let _url, www;
+  if(process.env.NODE_ENV == 'production'){
+  	www = 'http://m.maizuo.com';
   } else {
-    _url = `/v4/api${url}`
+  	www = '';
+  }
+  
+  if (query) {
+    _url = `${www}/v4/api${url}?${query}`
+  } else {
+    _url = `${www}/v4/api${url}`
   }
 
   return vue.http.get(_url)
