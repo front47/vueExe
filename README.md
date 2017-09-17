@@ -1,8 +1,8 @@
-# VUE2 æ•™å­¦é¡¹ç›®
+# VUE2 ½ÌÑ§ÏîÄ¿
 
-ä»å¼€æ”¾æ¥å£æ¥å…¥ç”µå½±èµ„æºæ•°æ®,ä½¿ç”¨vue-routerã€vue-resourceã€vuexç­‰å®˜æ–¹æ¨èæ’ä»¶å…¨é¢è®²è§£vueæ€æƒ³
+´Ó¿ª·Å½Ó¿Ú½ÓÈëµçÓ°×ÊÔ´Êı¾İ,Ê¹ÓÃvue-router¡¢vue-resource¡¢vuexµÈ¹Ù·½ÍÆ¼ö²å¼şÈ«Ãæ½²½âvueË¼Ïë
 
-## è¿è¡Œ
+## ÔËĞĞ
 
 ``` bash
 # install dependencies
@@ -18,65 +18,65 @@ npm run build
 npm run build --report
 ```
 
-### é¡¹ç›®ç‰¹ç‚¹ï¼š
+### ÏîÄ¿ÌØµã£º
 
-- éµå¾ªVUEå¼€æ”¾è§„èŒƒ
+- ×ñÑ­VUE¿ª·Å¹æ·¶
 
-- ä½¿ç”¨vue-routerç®¡ç†è·¯ç”±è·³è½¬ï¼Œå¹¶ä¼ å‚
+- Ê¹ÓÃvue-router¹ÜÀíÂ·ÓÉÌø×ª£¬²¢´«²Î
 
-- ä½¿ç”¨vuexè¿›è¡Œå…¨å±€çŠ¶æ€æœºç®¡ç†ï¼Œå¹¶ä½¿ç”¨æ¨¡å—åŒ–ç»“æ„ï¼Œä½¿ä¸šåŠ¡æ›´åŠ æ¸…æ™°
+- Ê¹ÓÃvuex½øĞĞÈ«¾Ö×´Ì¬»ú¹ÜÀí£¬²¢Ê¹ÓÃÄ£¿é»¯½á¹¹£¬Ê¹ÒµÎñ¸ü¼ÓÇåÎú
 
-- ä½¿ç”¨vue-resourceè¿›è¡Œè¯·æ±‚ç®¡ç†
+- Ê¹ÓÃvue-resource½øĞĞÇëÇó¹ÜÀí
 
-- ç»„ä»¶å…¨å±€æ³¨å…¥
+- ×é¼şÈ«¾Ö×¢Èë
 
-- ä½¿ç”¨fastclickä¼˜åŒ–ç§»åŠ¨ç«¯ä½“éªŒ
+- Ê¹ÓÃfastclickÓÅ»¯ÒÆ¶¯¶ËÌåÑé
 
 - ......
 
   ------
 
-  ### é¡¹ç›®è¯´æ˜:
+  ### ÏîÄ¿ËµÃ÷:
 
-  1. ç¯å¢ƒæ­å»º
+  1. »·¾³´î½¨
 
-     å®‰è£…nodeJs
+     °²×°nodeJs
 
-     å®‰è£…gitå·¥å…·
+     °²×°git¹¤¾ß
 
-  2. åˆ›å»ºé¡¹ç›®
+  2. ´´½¨ÏîÄ¿
 
      ```javascript
-     #  å…¨å±€å®‰è£…webpack
+     #  È«¾Ö°²×°webpack
      npm install webpack -g
-     # å…¨å±€å®‰è£…vueå®˜æ–¹è„šæ‰‹æ¶
+     # È«¾Ö°²×°vue¹Ù·½½ÅÊÖ¼Ü
      npm install vue-cli -g
-     # åˆå§‹åŒ–é¡¹ç›®
+     # ³õÊ¼»¯ÏîÄ¿
      vue init webapck vueExe
-     # è¿›å…¥ç›®å½•å¹¶å®‰è£…ä¾èµ–
+     # ½øÈëÄ¿Â¼²¢°²×°ÒÀÀµ
      cd vueExe && npm install
-     # å¯åŠ¨
+     # Æô¶¯
      npm start
      ```
 
-  3. å…³é”®ä»£ç 
+  3. ¹Ø¼ü´úÂë
 
-     å°†è‡ªå·±çš„ç»„ä»¶è¿›è¡Œå…¨å±€æ³¨å…¥:
+     ½«×Ô¼ºµÄ×é¼ş½øĞĞÈ«¾Ö×¢Èë:
 
      ```javascript
      Object.keys(components).forEach((key) => {
-     	var name = key.replace(/(\w)/, (v) => v.toUpperCase()) //é¦–å­—æ¯å¤§å†™
+     	var name = key.replace(/(\w)/, (v) => v.toUpperCase()) //Ê××ÖÄ¸´óĞ´
      	Vue.component(`v${name}`, components[key])
      })
      ```
 
-     å…¼å®¹ç§»åŠ¨ç«¯äº‹ä»¶:
+     ¼æÈİÒÆ¶¯¶ËÊÂ¼ş:
 
      ```javascript
      window.addEventListener('load', () =>  FastClick.attach(document.body))
      ```
 
-     çŠ¶æ€æ¨¡å—åŒ–ç®¡ç†:
+     ×´Ì¬Ä£¿é»¯¹ÜÀí:
 
      ```javascript
      export default new Vuex.Store({
@@ -88,8 +88,8 @@ npm run build --report
      })
      ```
 
-     â€‹
+     ?
 
 ### Something   Missing
 
-å¸Œæœ›åŒ—é‚®åœ¨çº¿å‰ç«¯47ç­æ‰€æœ‰åŒå­¦å‰ç¨‹ä¼¼é”¦,ä¸‡äº‹å¤§å‰!
+Ï£Íû±±ÓÊÔÚÏßÇ°¶Ë47°àËùÓĞÍ¬Ñ§Ç°³ÌËÆ½õ,ÍòÊÂ´ó¼ª!
