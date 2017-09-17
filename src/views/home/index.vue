@@ -31,7 +31,7 @@
   import NowPlaying from './now-playing'
   import ComingSoon from './coming-soon'
   import { swiper, swiperSlide } from 'vue-awesome-swiper'
-  import { mapGetters } from 'vuex'
+  import { mapState } from 'vuex'
 
   export default{
   	data() {
@@ -43,11 +43,11 @@
   		}
   	},
     computed: {
-      ...mapGetters({
-        comingSoonFilms: 'getComingSoonFilms',
-        nowPlayingFilms: 'getNowPlayingFilms',
-        billboards: 'getBillboards'
-      })
+      ...mapState({
+      	'billboards': state => state.film.billboards,
+      	'nowPlayingFilms': state => state.film.nowPlayingFilms,
+      	'comingSoonFilms': state => state.film.comingSoonFilms
+      } )
     },
     created () {
       this.$store.dispatch('fetchComingSoonLists', 1, 5)

@@ -116,3 +116,10 @@ export const fetchBillboards = ({commit}) => {
       return Promise.reject(error)
     })
 }
+
+export default {
+	fetchBillboards,
+	fetchFilmDetail,
+	fetchNowPlayingLists,
+	fetchComingSoonLists
+}

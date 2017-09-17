@@ -15,13 +15,11 @@
 </template>
 
 <script>
-	import { mapGetters } from 'vuex'
+	import { mapState } from 'vuex'
 	
 	export default {
 		computed: {
-			...mapGetters({
-				loading: 'getLoading'
-			})
+			...mapState({'loading': state => state.app.loading})
 		}
 	}
 </script>
